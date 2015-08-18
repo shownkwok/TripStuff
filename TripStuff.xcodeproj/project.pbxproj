@@ -7,13 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2937ABEA1B6B62D400619313 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2937ABE91B6B62D400619313 /* LoginViewController.swift */; };
+		293F4FEB1B81DA6700C47E91 /* WayPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293F4FEA1B81DA6700C47E91 /* WayPoint.swift */; };
 		294A976B1B69C3AD00A06883 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294A976A1B69C3AD00A06883 /* AppDelegate.swift */; };
-		294A976D1B69C3AD00A06883 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294A976C1B69C3AD00A06883 /* ViewController.swift */; };
+		294A976D1B69C3AD00A06883 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294A976C1B69C3AD00A06883 /* FirstViewController.swift */; };
 		294A97701B69C3AD00A06883 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294A976E1B69C3AD00A06883 /* Main.storyboard */; };
 		294A97721B69C3AD00A06883 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 294A97711B69C3AD00A06883 /* Assets.xcassets */; };
 		294A97751B69C3AD00A06883 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294A97731B69C3AD00A06883 /* LaunchScreen.storyboard */; };
 		294A97801B69C3AD00A06883 /* TripStuffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294A977F1B69C3AD00A06883 /* TripStuffTests.swift */; };
 		294A978B1B69C3AD00A06883 /* TripStuffUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294A978A1B69C3AD00A06883 /* TripStuffUITests.swift */; };
+		294A979A1B69D24500A06883 /* PrepareItemsSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294A97991B69D24500A06883 /* PrepareItemsSheetViewController.swift */; };
+		294A979C1B6A183C00A06883 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294A979B1B6A183C00A06883 /* ItemTableViewCell.swift */; };
+		2953AA421B71F57500989131 /* JournalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953AA411B71F57500989131 /* JournalTableViewController.swift */; };
+		2953AA451B720D8000989131 /* JournalEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953AA441B720D8000989131 /* JournalEditorViewController.swift */; };
+		2953AA471B720D9B00989131 /* JournalDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953AA461B720D9B00989131 /* JournalDetailTableViewCell.swift */; };
+		2953AA491B72113A00989131 /* JournalClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953AA481B72113A00989131 /* JournalClass.swift */; };
+		2973C8C61B774D4700554E35 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2973C8C51B774D4700554E35 /* MapViewController.swift */; };
+		299B07281B6AFA2D00B4DEA0 /* ItemClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B07271B6AFA2D00B4DEA0 /* ItemClass.swift */; };
+		299B072A1B6AFF6E00B4DEA0 /* DataTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B07291B6AFF6E00B4DEA0 /* DataTemp.swift */; };
+		29A735D31B6C937A0027ECF4 /* RigisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A735D21B6C937A0027ECF4 /* RigisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2935BA7E1B6DDF2300919F7C /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = ../MyPlayground.playground; sourceTree = "<group>"; };
+		2937ABE91B6B62D400619313 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		293F4FEA1B81DA6700C47E91 /* WayPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WayPoint.swift; path = ../WayPoint.swift; sourceTree = "<group>"; };
 		294A97671B69C3AD00A06883 /* TripStuff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripStuff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		294A976A1B69C3AD00A06883 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		294A976C1B69C3AD00A06883 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		294A976C1B69C3AD00A06883 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		294A976F1B69C3AD00A06883 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		294A97711B69C3AD00A06883 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		294A97741B69C3AD00A06883 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +62,16 @@
 		294A97861B69C3AD00A06883 /* TripStuffUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripStuffUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		294A978A1B69C3AD00A06883 /* TripStuffUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStuffUITests.swift; sourceTree = "<group>"; };
 		294A978C1B69C3AD00A06883 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		294A97991B69D24500A06883 /* PrepareItemsSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareItemsSheetViewController.swift; sourceTree = "<group>"; };
+		294A979B1B6A183C00A06883 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		2953AA411B71F57500989131 /* JournalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalTableViewController.swift; sourceTree = "<group>"; };
+		2953AA441B720D8000989131 /* JournalEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalEditorViewController.swift; sourceTree = "<group>"; };
+		2953AA461B720D9B00989131 /* JournalDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalDetailTableViewCell.swift; sourceTree = "<group>"; };
+		2953AA481B72113A00989131 /* JournalClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalClass.swift; sourceTree = "<group>"; };
+		2973C8C51B774D4700554E35 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		299B07271B6AFA2D00B4DEA0 /* ItemClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemClass.swift; sourceTree = "<group>"; };
+		299B07291B6AFF6E00B4DEA0 /* DataTemp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTemp.swift; sourceTree = "<group>"; };
+		29A735D21B6C937A0027ECF4 /* RigisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RigisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +99,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2935BA771B6DB8CE00919F7C /* catagory */ = {
+			isa = PBXGroup;
+			children = (
+				294A976C1B69C3AD00A06883 /* FirstViewController.swift */,
+			);
+			name = catagory;
+			sourceTree = "<group>";
+		};
+		2935BA781B6DB8F500919F7C /* item */ = {
+			isa = PBXGroup;
+			children = (
+				294A97991B69D24500A06883 /* PrepareItemsSheetViewController.swift */,
+				299B07271B6AFA2D00B4DEA0 /* ItemClass.swift */,
+				294A979B1B6A183C00A06883 /* ItemTableViewCell.swift */,
+			);
+			name = item;
+			sourceTree = "<group>";
+		};
+		2935BA791B6DB92E00919F7C /* data */ = {
+			isa = PBXGroup;
+			children = (
+				299B07291B6AFF6E00B4DEA0 /* DataTemp.swift */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+		293F4FE91B81D80600C47E91 /* map */ = {
+			isa = PBXGroup;
+			children = (
+				2973C8C51B774D4700554E35 /* MapViewController.swift */,
+				293F4FEA1B81DA6700C47E91 /* WayPoint.swift */,
+			);
+			name = map;
+			sourceTree = "<group>";
+		};
 		294A975E1B69C3AD00A06883 = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +157,14 @@
 		294A97691B69C3AD00A06883 /* TripStuff */ = {
 			isa = PBXGroup;
 			children = (
-				294A976A1B69C3AD00A06883 /* AppDelegate.swift */,
-				294A976C1B69C3AD00A06883 /* ViewController.swift */,
 				294A976E1B69C3AD00A06883 /* Main.storyboard */,
-				294A97711B69C3AD00A06883 /* Assets.xcassets */,
-				294A97731B69C3AD00A06883 /* LaunchScreen.storyboard */,
-				294A97761B69C3AD00A06883 /* Info.plist */,
+				299B072D1B6B0F6E00B4DEA0 /* User */,
+				2935BA771B6DB8CE00919F7C /* catagory */,
+				2935BA781B6DB8F500919F7C /* item */,
+				2953AA431B71F5E000989131 /* journal */,
+				293F4FE91B81D80600C47E91 /* map */,
+				2935BA791B6DB92E00919F7C /* data */,
+				294A97981B69C51700A06883 /* OtherFiles */,
 			);
 			path = TripStuff;
 			sourceTree = "<group>";
@@ -123,6 +185,38 @@
 				294A978C1B69C3AD00A06883 /* Info.plist */,
 			);
 			path = TripStuffUITests;
+			sourceTree = "<group>";
+		};
+		294A97981B69C51700A06883 /* OtherFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2935BA7E1B6DDF2300919F7C /* MyPlayground.playground */,
+				294A97711B69C3AD00A06883 /* Assets.xcassets */,
+				294A97731B69C3AD00A06883 /* LaunchScreen.storyboard */,
+				294A97761B69C3AD00A06883 /* Info.plist */,
+				294A976A1B69C3AD00A06883 /* AppDelegate.swift */,
+			);
+			name = OtherFiles;
+			sourceTree = "<group>";
+		};
+		2953AA431B71F5E000989131 /* journal */ = {
+			isa = PBXGroup;
+			children = (
+				2953AA411B71F57500989131 /* JournalTableViewController.swift */,
+				2953AA441B720D8000989131 /* JournalEditorViewController.swift */,
+				2953AA461B720D9B00989131 /* JournalDetailTableViewCell.swift */,
+				2953AA481B72113A00989131 /* JournalClass.swift */,
+			);
+			name = journal;
+			sourceTree = "<group>";
+		};
+		299B072D1B6B0F6E00B4DEA0 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				2937ABE91B6B62D400619313 /* LoginViewController.swift */,
+				29A735D21B6C937A0027ECF4 /* RigisterViewController.swift */,
+			);
+			name = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +286,7 @@
 				TargetAttributes = {
 					294A97661B69C3AD00A06883 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = BYCVM5XZ26;
 					};
 					294A977A1B69C3AD00A06883 = {
 						CreatedOnToolsVersion = 7.0;
@@ -255,7 +350,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				294A976D1B69C3AD00A06883 /* ViewController.swift in Sources */,
+				294A979C1B6A183C00A06883 /* ItemTableViewCell.swift in Sources */,
+				299B072A1B6AFF6E00B4DEA0 /* DataTemp.swift in Sources */,
+				2953AA491B72113A00989131 /* JournalClass.swift in Sources */,
+				294A976D1B69C3AD00A06883 /* FirstViewController.swift in Sources */,
+				299B07281B6AFA2D00B4DEA0 /* ItemClass.swift in Sources */,
+				2937ABEA1B6B62D400619313 /* LoginViewController.swift in Sources */,
+				2973C8C61B774D4700554E35 /* MapViewController.swift in Sources */,
+				294A979A1B69D24500A06883 /* PrepareItemsSheetViewController.swift in Sources */,
+				293F4FEB1B81DA6700C47E91 /* WayPoint.swift in Sources */,
+				29A735D31B6C937A0027ECF4 /* RigisterViewController.swift in Sources */,
+				2953AA451B720D8000989131 /* JournalEditorViewController.swift in Sources */,
+				2953AA421B71F57500989131 /* JournalTableViewController.swift in Sources */,
+				2953AA471B720D9B00989131 /* JournalDetailTableViewCell.swift in Sources */,
 				294A976B1B69C3AD00A06883 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,10 +505,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TripStuff/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = XI.com.TripStuff;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -409,10 +520,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TripStuff/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = XI.com.TripStuff;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -483,6 +598,7 @@
 				294A97911B69C3AD00A06883 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		294A97921B69C3AD00A06883 /* Build configuration list for PBXNativeTarget "TripStuffTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +607,7 @@
 				294A97941B69C3AD00A06883 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		294A97951B69C3AD00A06883 /* Build configuration list for PBXNativeTarget "TripStuffUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +616,7 @@
 				294A97971B69C3AD00A06883 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
