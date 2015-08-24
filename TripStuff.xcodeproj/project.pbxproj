@@ -26,6 +26,7 @@
 		299B07281B6AFA2D00B4DEA0 /* ItemClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B07271B6AFA2D00B4DEA0 /* ItemClass.swift */; };
 		299B072A1B6AFF6E00B4DEA0 /* DataTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B07291B6AFF6E00B4DEA0 /* DataTemp.swift */; };
 		29A735D31B6C937A0027ECF4 /* RigisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A735D21B6C937A0027ECF4 /* RigisterViewController.swift */; };
+		29B15BE91B870A4700D4134A /* TripSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B15BE81B870A4700D4134A /* TripSettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		299B07271B6AFA2D00B4DEA0 /* ItemClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemClass.swift; sourceTree = "<group>"; };
 		299B07291B6AFF6E00B4DEA0 /* DataTemp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTemp.swift; sourceTree = "<group>"; };
 		29A735D21B6C937A0027ECF4 /* RigisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RigisterViewController.swift; sourceTree = "<group>"; };
+		29B15BE81B870A4700D4134A /* TripSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripSettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			children = (
 				2973C8C51B774D4700554E35 /* MapViewController.swift */,
 				293F4FEA1B81DA6700C47E91 /* WayPoint.swift */,
+				29B15BE81B870A4700D4134A /* TripSettingViewController.swift */,
 			);
 			name = map;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				294A979A1B69D24500A06883 /* PrepareItemsSheetViewController.swift in Sources */,
 				293F4FEB1B81DA6700C47E91 /* WayPoint.swift in Sources */,
 				29A735D31B6C937A0027ECF4 /* RigisterViewController.swift in Sources */,
+				29B15BE91B870A4700D4134A /* TripSettingViewController.swift in Sources */,
 				2953AA451B720D8000989131 /* JournalEditorViewController.swift in Sources */,
 				2953AA421B71F57500989131 /* JournalTableViewController.swift in Sources */,
 				2953AA471B720D9B00989131 /* JournalDetailTableViewCell.swift in Sources */,
