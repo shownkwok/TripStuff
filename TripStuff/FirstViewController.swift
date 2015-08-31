@@ -9,7 +9,7 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-    struct constant {
+    struct Constant {
         static let PreparationSegueID = "showPerparation"
         static let JournalSegueID = "showJournal"
         static let ButtonAnimationDuration: Double = 0.5
@@ -28,24 +28,23 @@ class FirstViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func knowledge(sender: UIButton) {
     }
     
     @IBAction func preparation(sender: UIButton) {
-        buttonZoomAnimation(sender, segueID: constant.PreparationSegueID)
+        buttonZoomAnimation(sender, segueID: Constant.PreparationSegueID)
     }
 
     @IBAction func writejournal(sender: UIButton) {
-        buttonZoomAnimation(sender, segueID: constant.JournalSegueID)
+        buttonZoomAnimation(sender, segueID: Constant.JournalSegueID)
     }
     
     func buttonZoomAnimation(button: UIButton, segueID: String){
-        button.transform = CGAffineTransformMakeScale(constant.ButtonAnimationSizeZoomIn, constant.ButtonAnimationSizeZoomIn)
-        UIView.animateWithDuration(constant.ButtonAnimationDuration, delay: constant.ButtonAnimationDelay, usingSpringWithDamping: constant.ButtonAnimationDamping, initialSpringVelocity: constant.ButtonAnimationInitialSpeed, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-            button.transform = CGAffineTransformMakeScale(constant.ButtonAnimationSizeZoomOut, constant.ButtonAnimationSizeZoomOut)
+        button.transform = CGAffineTransformMakeScale(Constant.ButtonAnimationSizeZoomIn, Constant.ButtonAnimationSizeZoomIn)
+        UIView.animateWithDuration(Constant.ButtonAnimationDuration, delay: Constant.ButtonAnimationDelay, usingSpringWithDamping: Constant.ButtonAnimationDamping, initialSpringVelocity: Constant.ButtonAnimationInitialSpeed, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+            button.transform = CGAffineTransformMakeScale(Constant.ButtonAnimationSizeZoomOut, Constant.ButtonAnimationSizeZoomOut)
             }) { (Bool) -> Void in
                 self.performSegueWithIdentifier(segueID, sender: self)
         }

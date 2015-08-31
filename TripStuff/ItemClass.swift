@@ -12,7 +12,6 @@ class ItemClass {
     var itemName: String!
     var itemNumber: String!
     var itemImage: UIImageView?
-    
     init (itemName: String, itemNumber: String){
         self.itemName = itemName
         self.itemNumber = itemNumber

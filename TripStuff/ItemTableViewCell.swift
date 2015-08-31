@@ -9,29 +9,28 @@
 import UIKit
 
 class ItemTableViewCell: UITableViewCell, UITextFieldDelegate {
-    struct constant {
-        static let buttonTitleOn = "Checked"
-        static let buttonTitleOff = "Uncheck"
-        static let defaultItemNumber: Int = 1
+    struct Constant {
+        static let ButtonTitleOn = "checked"
+        static let ButtonTitleOff = "check"
+        static let DefaultItemNumber: Int = 1
     }
 
     @IBAction func itemCheck(sender: UIButton) {
-            if sender.imageForState(.Normal) == UIImage(named: "check"){
-                sender.setImage(UIImage(named: "checked"), forState: UIControlState.Normal)
-                itemNumber.text = "\(constant.defaultItemNumber)"
-                setData("checked")
+            if sender.imageForState(.Normal) == UIImage(named: Constant.ButtonTitleOff){
+                sender.setImage(UIImage(named: Constant.ButtonTitleOn), forState: UIControlState.Normal)
+                itemNumber.text = "\(Constant.DefaultItemNumber)"
+                setData(Constant.ButtonTitleOn)
             }else{
-                sender.setImage(UIImage(named: "check"), forState: UIControlState.Normal)
+                sender.setImage(UIImage(named: Constant.ButtonTitleOff), forState: UIControlState.Normal)
                 itemNumber.text = "0"
 
-                setData("check")
+                setData(Constant.ButtonTitleOff)
             }
             data?.writeToFile("\(path)\(user!).plist", atomically: true)
     }
     
     @IBOutlet weak var checkOutlet: UIButton!
     @IBOutlet weak var itemName: UILabel!
-
     @IBOutlet weak var itemNumber: UITextField!{
         didSet{
             itemNumber.delegate = self
@@ -42,7 +41,7 @@ class ItemTableViewCell: UITableViewCell, UITextFieldDelegate {
         return true
     }
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
-        checkOutlet.setImage(UIImage(named: "ckeck"), forState: UIControlState.Normal)
+        checkOutlet.setImage(UIImage(named: Constant.ButtonTitleOff), forState: UIControlState.Normal)
         return true
     }
     func setData(buttonState: String){
@@ -50,7 +49,7 @@ class ItemTableViewCell: UITableViewCell, UITextFieldDelegate {
             for i in data?.objectForKey(keys)?.allKeys as! [String]
             {
                 if itemName.text == i {
-                    if buttonState == "check"{
+                    if buttonState == Constant.ButtonTitleOff{
                     data?.objectForKey(keys)?.setObject("0", forKey: i)
                     }else{
                         data?.objectForKey(keys)?.setObject(itemNumber.text, forKey: i)

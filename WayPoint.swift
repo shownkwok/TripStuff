@@ -8,12 +8,14 @@
 
 import UIKit
 import MapKit
+
+
 class Waypoint: NSObject{
-    var latitude: Double?
-    var longitude: Double?
-    var name: String?
-    var info: String?
-    var dateAndTime: NSDate?
+    var latitude: Double!
+    var longitude: Double!
+    var name: String = ""
+    var info: String = "There is no Info"
+    var dateAndTime: NSDate!
     init(latitude: Double, longitude: Double){
         self.longitude = longitude
         self.latitude = latitude
@@ -22,15 +24,17 @@ class Waypoint: NSObject{
 
 extension Waypoint: MKAnnotation {
     var coordinate: CLLocationCoordinate2D{
-        return CLLocationCoordinate2D(latitude: latitude!, longitude: longitude!)
+        return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
     var title: String! { return name }
-    var subtitle: String? { return "\(dateAndTime)" }
+    var subtitle: String? {
+        return "\(timeChange(dateAndTime))"
+    }
 }
 
 class EditableWaypoint: Waypoint {
     override var coordinate: CLLocationCoordinate2D{
-        get {return super.coordinate }
+        get {return super.coordinate}
         set {
             latitude = newValue.latitude
             longitude = newValue.longitude

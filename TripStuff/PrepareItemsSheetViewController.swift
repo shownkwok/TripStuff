@@ -9,7 +9,7 @@
 import UIKit
 
 class PrepareItemsSheetViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    struct constant {
+    struct Constant {
         static let ItemID = "Item"
         static let HeightForHeaderInSection:CGFloat = 30
         static let TableViewAnimationDuration: Double = 2
@@ -33,11 +33,12 @@ class PrepareItemsSheetViewController: UIViewController, UITableViewDataSource, 
     @IBOutlet weak var itemTableView: UITableView!
     
     @IBOutlet weak var instructionImage: UIImageView!
+    
     @IBAction func updateTableView(sender: UIBarButtonItem) {
         buttonForChange = !buttonForChange
         if buttonForChange == true{
             sender.title = "List"
-            UIView.animateWithDuration(constant.TableViewAnimationDuration, delay: constant.TableViewAnimationDelay, usingSpringWithDamping: constant.TableViewAnimationDamping, initialSpringVelocity: constant.TableViewAnimationInitialSpeed, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+            UIView.animateWithDuration(Constant.TableViewAnimationDuration, delay: Constant.TableViewAnimationDelay, usingSpringWithDamping: Constant.TableViewAnimationDamping, initialSpringVelocity: Constant.TableViewAnimationInitialSpeed, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
                 self.itemTable.frame = CGRectMake(0, 220, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height)
                 self.instructionImage.alpha = 1
                 }, completion: { (Bool) -> Void in
@@ -46,7 +47,7 @@ class PrepareItemsSheetViewController: UIViewController, UITableViewDataSource, 
             self.itemTableView.reloadData()
         }else{
             sender.title = "Change"
-            UIView.animateWithDuration(constant.TableViewAnimationDuration, delay: constant.TableViewAnimationDelay, usingSpringWithDamping: constant.TableViewAnimationDamping, initialSpringVelocity: constant.TableViewAnimationInitialSpeed, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+            UIView.animateWithDuration(Constant.TableViewAnimationDuration, delay: Constant.TableViewAnimationDelay, usingSpringWithDamping: Constant.TableViewAnimationDamping, initialSpringVelocity: Constant.TableViewAnimationInitialSpeed, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
                 self.itemTable.frame = CGRectMake(0, 64, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height)
                 self.instructionImage.alpha = 0
                 }, completion: { (Bool) -> Void in
@@ -58,7 +59,6 @@ class PrepareItemsSheetViewController: UIViewController, UITableViewDataSource, 
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
@@ -69,13 +69,13 @@ class PrepareItemsSheetViewController: UIViewController, UITableViewDataSource, 
     }
     
     
-//MARK:sitting tableview
+//MARK:Setting tableview
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return name.count
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return constant.HeightForHeaderInSection
+        return Constant.HeightForHeaderInSection
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if buttonForChange == false{
@@ -95,7 +95,7 @@ class PrepareItemsSheetViewController: UIViewController, UITableViewDataSource, 
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        let cellIdentifier = constant.ItemID
+        let cellIdentifier = Constant.ItemID
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ItemTableViewCell
         if buttonForChange == false{
             cell.checkOutlet.hidden = true
@@ -122,7 +122,7 @@ class PrepareItemsSheetViewController: UIViewController, UITableViewDataSource, 
     }
     
     
-//MARK:functions
+//MARK:Functions
     func getData(datas: NSMutableDictionary){
         //get data for editing
         name.removeAll(keepCapacity: true)

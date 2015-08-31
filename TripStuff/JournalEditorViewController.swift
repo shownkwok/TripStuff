@@ -11,8 +11,8 @@ import MobileCoreServices
 
 class JournalEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    struct constant {
-        static let showEditedSegueID = "showEdited"
+    struct Constant {
+        static let ShowEditedSegueID = "showEdited"
     }
     
     var journal: JournalClass?{
@@ -33,13 +33,11 @@ class JournalEditorViewController: UIViewController, UIImagePickerControllerDele
         super.didReceiveMemoryWarning()
     }
     
-    
     var imageView = UIImageView()
     @IBOutlet weak var imagePicker: UIView!{
         didSet{
             imageView.frame = CGRectMake(100, 100, 200, 200)
             imagePicker.addSubview(imageView)
-            print("test")
         }
     }
 
@@ -56,6 +54,17 @@ class JournalEditorViewController: UIViewController, UIImagePickerControllerDele
         presentViewController(picker, animated: true, completion: nil)
     }
     
+    @IBOutlet weak var imageCollection: UICollectionView!
+    
+    @IBOutlet weak var detailInput: UITextView!
+    
+    @IBAction func done(sender: UIButton) {
+        if titleInput.text != ""{
+            journal = JournalClass(journalTitle: titleInput.text!)
+            journal?.journalDetail = detailInput.text
+            performSegueWithIdentifier(Constant.ShowEditedSegueID, sender: self)
+        }
+    }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         var image = info[UIImagePickerControllerEditedImage] as? UIImage
@@ -65,27 +74,17 @@ class JournalEditorViewController: UIViewController, UIImagePickerControllerDele
         imageView.image = image
         print(image)
         dismissViewControllerAnimated(true, completion: nil)
-
+        
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
     }
-    @IBOutlet weak var imageCollection: UICollectionView!
-    @IBOutlet weak var detailInput: UITextView!
-    @IBAction func done(sender: UIButton) {
-        if titleInput.text != ""{
-            journal = JournalClass(journalTitle: titleInput.text!)
-            journal?.journalDetail = detailInput.text
-            performSegueWithIdentifier(constant.showEditedSegueID, sender: self)
-        }
-    }
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+// MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let viewController = segue.destinationViewController as! JournalTableViewController
-            if segue.identifier == constant.showEditedSegueID{
+            if segue.identifier == Constant.ShowEditedSegueID{
                 viewController.journalChanged = journal
             }
     }

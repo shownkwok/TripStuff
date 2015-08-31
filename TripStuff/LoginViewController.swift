@@ -9,14 +9,6 @@
 import UIKit
 
 //overall constant
-var data: NSMutableDictionary?
-var user: String?{
-didSet{
-    data = NSMutableDictionary(contentsOfFile: "\(path)\(user!).plist")
-}
-}
-let path = "/Users/SHAWN/Desktop/TripStuff/"
-let userPath = "/Users/SHAWN/Desktop/TripStuff/user/user.plist"
 
 
 
@@ -33,7 +25,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         static let InValidLoginAnimationDelay: Double = 0
         static let InValidLoginAnimationDamping: CGFloat = 0.4
         static let InValidLoginAnimationInitialSpeed: CGFloat = 4
-
         static let LoginSegueID = "Login"
         static let RigisterSegueID = "Rigister"
         static let InvalidLoginColor: UIColor = UIColor.redColor()
@@ -104,7 +95,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         password.resignFirstResponder()
         return true
     }
-    
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue){
         

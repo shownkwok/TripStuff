@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2937ABEA1B6B62D400619313 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2937ABE91B6B62D400619313 /* LoginViewController.swift */; };
+		2937FA691B8C88D3001A283E /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2937FA681B8C88D3001A283E /* MapTableViewCell.swift */; };
 		293F4FEB1B81DA6700C47E91 /* WayPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293F4FEA1B81DA6700C47E91 /* WayPoint.swift */; };
 		294A976B1B69C3AD00A06883 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294A976A1B69C3AD00A06883 /* AppDelegate.swift */; };
 		294A976D1B69C3AD00A06883 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294A976C1B69C3AD00A06883 /* FirstViewController.swift */; };
@@ -27,6 +28,8 @@
 		299B072A1B6AFF6E00B4DEA0 /* DataTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B07291B6AFF6E00B4DEA0 /* DataTemp.swift */; };
 		29A735D31B6C937A0027ECF4 /* RigisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A735D21B6C937A0027ECF4 /* RigisterViewController.swift */; };
 		29B15BE91B870A4700D4134A /* TripSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B15BE81B870A4700D4134A /* TripSettingViewController.swift */; };
+		29C04C361B8C6F9200748CE5 /* MapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C04C351B8C6F9200748CE5 /* MapTableViewController.swift */; };
+		29EFEE091B8DA676008C326C /* OverAllFuncsAndData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EFEE081B8DA676008C326C /* OverAllFuncsAndData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,7 @@
 /* Begin PBXFileReference section */
 		2935BA7E1B6DDF2300919F7C /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = ../MyPlayground.playground; sourceTree = "<group>"; };
 		2937ABE91B6B62D400619313 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2937FA681B8C88D3001A283E /* MapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
 		293F4FEA1B81DA6700C47E91 /* WayPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WayPoint.swift; path = ../WayPoint.swift; sourceTree = "<group>"; };
 		294A97671B69C3AD00A06883 /* TripStuff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripStuff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		294A976A1B69C3AD00A06883 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 		299B07291B6AFF6E00B4DEA0 /* DataTemp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTemp.swift; sourceTree = "<group>"; };
 		29A735D21B6C937A0027ECF4 /* RigisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RigisterViewController.swift; sourceTree = "<group>"; };
 		29B15BE81B870A4700D4134A /* TripSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripSettingViewController.swift; sourceTree = "<group>"; };
+		29C04C351B8C6F9200748CE5 /* MapTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTableViewController.swift; sourceTree = "<group>"; };
+		29EFEE081B8DA676008C326C /* OverAllFuncsAndData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverAllFuncsAndData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				2973C8C51B774D4700554E35 /* MapViewController.swift */,
+				29C04C351B8C6F9200748CE5 /* MapTableViewController.swift */,
+				2937FA681B8C88D3001A283E /* MapTableViewCell.swift */,
 				293F4FEA1B81DA6700C47E91 /* WayPoint.swift */,
 				29B15BE81B870A4700D4134A /* TripSettingViewController.swift */,
 			);
@@ -161,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				294A976E1B69C3AD00A06883 /* Main.storyboard */,
+				29EFEE081B8DA676008C326C /* OverAllFuncsAndData.swift */,
 				299B072D1B6B0F6E00B4DEA0 /* User */,
 				2935BA771B6DB8CE00919F7C /* catagory */,
 				2935BA781B6DB8F500919F7C /* item */,
@@ -353,18 +362,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2937FA691B8C88D3001A283E /* MapTableViewCell.swift in Sources */,
 				294A979C1B6A183C00A06883 /* ItemTableViewCell.swift in Sources */,
 				299B072A1B6AFF6E00B4DEA0 /* DataTemp.swift in Sources */,
 				2953AA491B72113A00989131 /* JournalClass.swift in Sources */,
 				294A976D1B69C3AD00A06883 /* FirstViewController.swift in Sources */,
 				299B07281B6AFA2D00B4DEA0 /* ItemClass.swift in Sources */,
 				2937ABEA1B6B62D400619313 /* LoginViewController.swift in Sources */,
+				29EFEE091B8DA676008C326C /* OverAllFuncsAndData.swift in Sources */,
 				2973C8C61B774D4700554E35 /* MapViewController.swift in Sources */,
 				294A979A1B69D24500A06883 /* PrepareItemsSheetViewController.swift in Sources */,
 				293F4FEB1B81DA6700C47E91 /* WayPoint.swift in Sources */,
 				29A735D31B6C937A0027ECF4 /* RigisterViewController.swift in Sources */,
 				29B15BE91B870A4700D4134A /* TripSettingViewController.swift in Sources */,
 				2953AA451B720D8000989131 /* JournalEditorViewController.swift in Sources */,
+				29C04C361B8C6F9200748CE5 /* MapTableViewController.swift in Sources */,
 				2953AA421B71F57500989131 /* JournalTableViewController.swift in Sources */,
 				2953AA471B720D9B00989131 /* JournalDetailTableViewCell.swift in Sources */,
 				294A976B1B69C3AD00A06883 /* AppDelegate.swift in Sources */,

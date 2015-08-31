@@ -88,6 +88,7 @@ class TripSettingViewController: UIViewController, UITextFieldDelegate, UITextVi
     
     @IBAction func dismissViewController(sender: UIBarButtonItem) {
         newWaypoint?.dateAndTime = datePicker.date
+        newWaypoint?.info = tripDetail.text
         presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -100,9 +101,10 @@ class TripSettingViewController: UIViewController, UITextFieldDelegate, UITextVi
         let queue = NSOperationQueue.mainQueue()
         forRemoveObserverNumberOne = center.addObserverForName(UITextFieldTextDidChangeNotification, object: tripTitle, queue: queue) { (NSNotification) -> Void in
             if let waypoint = self.newWaypoint{
-                waypoint.name = self.tripTitle.text
+                waypoint.name = self.tripTitle.text!
             }
         }
+        
         forRemoveObserverNumberTwo = center.addObserverForName(UITextFieldTextDidChangeNotification, object: tripDetail, queue: queue) { (NSNotification) -> Void in
             if let waypoint = self.newWaypoint{
                 waypoint.info = self.tripDetail.text
