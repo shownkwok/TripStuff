@@ -15,17 +15,16 @@ class MapViewController: UIViewController, MKMapViewDelegate{
         static let AnnotationReuseID = "waypoint"
         static let SegueIDtoWaypointTable = "showWaypointTable"
     }
-    
-    
 
     var waypoint = [Waypoint]()
-    var waypointForEdit: Waypoint?
     
+    var waypointForEdit: Waypoint?
     override func viewDidLoad() {
         super.viewDidLoad()
         let dateChanger = NSDateFormatter()
+        dateChanger.dateFormat = "yyyy-MM-dd HH:mm"
         for initdataToBeAdded in initData{
-        let waypointToBeAdded = Waypoint(latitude: Double.changeToDouble(initdataToBeAdded[3]), longitude: Double.changeToDouble(initdataToBeAdded[4]))
+            let waypointToBeAdded = Waypoint(latitude: Double.changeToDouble(initdataToBeAdded[3]), longitude: Double.changeToDouble(initdataToBeAdded[4]))
             waypointToBeAdded.dateAndTime = dateChanger.dateFromString(initdataToBeAdded[1])
             waypointToBeAdded.name = initdataToBeAdded[0]
             waypointToBeAdded.info = initdataToBeAdded[2]
@@ -47,6 +46,8 @@ class MapViewController: UIViewController, MKMapViewDelegate{
         didSet{
             mapView.showsUserLocation = true
             mapView.delegate = self
+            mapView.showsUserLocation = true
+            mapView.setUserTrackingMode(MKUserTrackingMode.Follow, animated: true)
         }
     }
 
@@ -72,7 +73,6 @@ class MapViewController: UIViewController, MKMapViewDelegate{
             mapView.removeAnnotation(view.annotation!)
         }
     }
-    
 
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         var view = mapView.dequeueReusableAnnotationViewWithIdentifier(Constant.AnnotationReuseID)
@@ -91,6 +91,8 @@ class MapViewController: UIViewController, MKMapViewDelegate{
         return view
     }
     
+    
+    //MARK: Add annotation
     @IBAction func addAnnotation(sender: UILongPressGestureRecognizer) {
         if sender.state == UIGestureRecognizerState.Began{
             let newPoint = sender.locationInView(mapView)
@@ -116,10 +118,13 @@ class MapViewController: UIViewController, MKMapViewDelegate{
         }else if segue.identifier == Constant.SegueIDtoWaypointTable{
             if let viewController = segue.destinationViewController.contentViewController as? MapTableViewController{
                 viewController.waypointsForTableView = waypoint
-                print(waypoint[0].dateAndTime)
             }
         }
     }
+    @IBAction func unwindSegue(segue: UIStoryboardSegue){
+        
+    }
+
 }
 
 

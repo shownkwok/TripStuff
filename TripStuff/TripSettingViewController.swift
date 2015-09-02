@@ -13,7 +13,6 @@ class TripSettingViewController: UIViewController, UITextFieldDelegate, UITextVi
     var newWaypoint: Waypoint?
     
     struct Constant {
-        static let showMapSegueID = "showMapAfterEdit"
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -23,6 +22,7 @@ class TripSettingViewController: UIViewController, UITextFieldDelegate, UITextVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tripTitle.becomeFirstResponder()
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -84,7 +84,6 @@ class TripSettingViewController: UIViewController, UITextFieldDelegate, UITextVi
             }
         }
     }
-    
     
     @IBAction func dismissViewController(sender: UIBarButtonItem) {
         newWaypoint?.dateAndTime = datePicker.date

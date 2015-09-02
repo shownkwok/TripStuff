@@ -11,9 +11,9 @@ import UIKit
 class MapTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var waypointsForTableView = [Waypoint]()
-
     struct Constant {
         static let cellID = "waypoint"
+        static let segueIDToEditViewController = "showEditFromTable"
     }
     
     override func viewDidLoad() {
@@ -24,7 +24,15 @@ class MapTableViewController: UIViewController, UITableViewDataSource, UITableVi
         super.didReceiveMemoryWarning()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        waypointsForTableView = sortByDateAndTime(waypointsForTableView)
+        tableView.reloadData()
+    }
+    
 
+//MARK: Setting table
+    @IBOutlet weak var tableView: UITableView!
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return waypointsForTableView.count
@@ -34,22 +42,29 @@ class MapTableViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = tableView.dequeueReusableCellWithIdentifier(Constant.cellID, forIndexPath: indexPath) as! MapTableViewCell
         let row = indexPath.row
         cell.title.text = waypointsForTableView[row].title
-      //  cell.time.text = String.changeToString(timeChange(waypointsForTableView[row].dateAndTime))
+        cell.time.text = String.changeToString(timeChange(waypointsForTableView[row].dateAndTime))
         cell.longitude.text = String.changeToString(waypointsForTableView[row].longitude!)
         cell.lagitude.text = String.changeToString(waypointsForTableView[row].latitude!)
         cell.info.text = String.changeToString(waypointsForTableView[row].info)
         return cell
     }
+    
+    var selectedWaypoint: Waypoint!
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        selectedWaypoint = waypointsForTableView[indexPath.row]
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if selectedWaypoint != nil{
+            performSegueWithIdentifier(Constant.segueIDToEditViewController, sender: self)
+        }
     }
-    */
-
+    
+    // MARK: - Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == Constant.segueIDToEditViewController{
+            if let viewController = segue.destinationViewController.contentViewController as? TripSettingViewController{
+                viewController.newWaypoint = selectedWaypoint
+            }
+        }
+    }
 }
 

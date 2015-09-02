@@ -14,11 +14,13 @@ didSet{
     data = NSMutableDictionary(contentsOfFile: "\(path)\(user!).plist")
 }
 }
-let path = "/Users/SHAWN/Desktop/TripStuff/"
-let userPath = "/Users/SHAWN/Desktop/TripStuff/user/user.plist"
+
+//if change the mac, "guojian" needs to be changed into new macs name
+let path = "/Users//Users/guojian/Desktop/Desktop/TripStuff/"
+let userPath = "/Users//Users/guojian/Desktop/Desktop/TripStuff/user/user.plist"
 
 //TODO: temp data , will be deleted
-let initData = [["init1","2015-08-21 08:00","this info","20","30","this is image url"],["init2","2015-08-22 08:00","this info2","21","30","this is image url num 2"]]
+let initData = [["init1","2015-08-21 08:00","this info","20","30","this is image url"],["init2","2015-08-22 08:00","this info2","20.0001","30","this is image url num 2"]]
 
 
 extension UIViewController{
@@ -44,11 +46,26 @@ extension Double{
     }
 }
 
-
-
 //MARK: New Functions
 func timeChange(time: NSDate) -> String{
     let timer = NSDateFormatter()
     timer.dateFormat = "yyyy-MM-dd HH:mm"
     return timer.stringFromDate(time)
 }
+
+func sortByDateAndTime(var waypoints:[Waypoint])->[Waypoint]{
+    if waypoints.count > 1{
+        for var i = 0; i<waypoints.count; ++i{
+            for var j = i; j<waypoints.count; ++j{
+                let earlyOne = waypoints[i].dateAndTime.earlierDate(waypoints[j].dateAndTime)
+                if waypoints[i].dateAndTime != earlyOne{
+                    let temp = waypoints[j]
+                    waypoints[j] = waypoints[i]
+                    waypoints[i] = temp
+                }
+            }
+        }
+    }
+    return waypoints
+}
+
