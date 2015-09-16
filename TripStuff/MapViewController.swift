@@ -41,15 +41,17 @@ class MapViewController: UIViewController, MKMapViewDelegate{
         super.didReceiveMemoryWarning()
     }
     
-        
     @IBOutlet weak var mapView: MKMapView!{
         didSet{
             mapView.showsUserLocation = true
+            mapView.mapType = MKMapType.Satellite
             mapView.delegate = self
             mapView.showsUserLocation = true
             mapView.setUserTrackingMode(MKUserTrackingMode.Follow, animated: true)
         }
     }
+    
+
 
 //MARK: Setting Map
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
@@ -92,7 +94,7 @@ class MapViewController: UIViewController, MKMapViewDelegate{
     }
     
     
-    //MARK: Add annotation
+//MARK: Add annotation
     @IBAction func addAnnotation(sender: UILongPressGestureRecognizer) {
         if sender.state == UIGestureRecognizerState.Began{
             let newPoint = sender.locationInView(mapView)
